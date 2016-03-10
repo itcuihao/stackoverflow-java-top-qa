@@ -67,7 +67,7 @@ public class StringInSwitchCase{
 
 switch的更多深层技术实现，可以参考JVM规范，[compliation of switch statements](http://docs.oracle.com/javase/specs/jvms/se7/html/jvms-3.html#jvms-3.10)。简单概括说，根据使用的常量的多寡，switch会对应到两种不同的JVM指令。JVM指令有所不同，归根结底都是为了代码的效率。
 
-如果常量很多，会将case的int值去掉最低位后作为索引，放到一个指针表中——也就是所谓的`tablewitch`指令
+如果常量很多，会将case的int值去掉最低位后作为索引，放到一个指针表中——也就是所谓的`tableswitch`指令
 
 如果常量相对较少，那么可用二分查找来找到正确的case--也就是所谓的`lookupswitch`指令
 
